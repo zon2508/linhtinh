@@ -1,11 +1,9 @@
-// Chỉnh nội dung bức thư tại đây.
 const letter = {
-	recipient: 'Đọc đi các bé',
+	recipient: 'Đọc đi mn',
 	title: 'Dành ra vài phút plis',
 	message: 'Từ khi lên lớp 6, chính cái năm đó đã khiến tôi trở thành một con người hoàn toàn khác. Tôi biết đến web sếch (riel) biết được các người bạn trong roblox (tựa game đầu tiên khiến có bạn bè dù là online và hiện giờ vẫn vậy) xong rồi nạp game, được nói chuyện với người nước ngoài,... rất nhiều điều. Có hội bạn đầu tiên làm tôi rất vui khi mà lúc đó gia đình tôi khi mà ba mẹ li hôn, cãi nhau. không được hòa thuận, dù điều kiện của tôi tốt hơn rất nhiều người nhưng lại không có tình phụ mẫu làm tôi đã phải trầm cảm suốt 2-3 năm trong thời kì khá là đen tối, đã có lúc tôi đã định 44(dù có thể bọn m cũng đã từng nhưng đây là câu chuyện của t nên là đọc thôi nha k phán xét) và cũng có khá nhiều suy nghĩ bẩn tưởi với con người(trust) và rồi khi lên cấp 3 thì t đã phải tự học cách chữa trầm cảm nhưng vẫn chưa được khỏi hẳn xong rồi t đã gặp một hội bạn nữa cũng đã làm hành trình học cấp 3 của tôi đặc sắc và thoát khỏi cảnh bị trầm cảm và bước ra khỏi các suy nghĩ tiêu cực và ovt. Cuộc đời t thì chuyển nhà gần 15 lần, chuyển trường 5 lần nên đó cũng là lí do t không có nhiều bạn bè và gia đình. Hiện nay t đã 18 tuổi rồi và giờ t phải học nhiều thứ ngoài xã hội hơn và phải chịu trách nhiệm lời nói của mình. Dù còn rất nhiều chuyện muốn kể nhưng t quá lười vậy nên sẽ kết bài luôn. Cảm ơn tất cả mọi người đã đồng hành cùng tôi từ trước tới nay, dù ngắn hay dài t đều trân trọng điều đấy, có thể rất nhiều ng không nhớ t nhưng t vẫn nhớ mọi người và quý mọi người nhiều. Một điều nữa.... về sau khi nào bố dư dả bố sẽ bao ăn tất cả các con', 
     signature: 'zon'
 };
-
 const styles = document.createElement('style');
 styles.textContent = `
 	:root { --green:#244b49; --soft-green:#d9ebe4; --coral:#e97859; --cream:#fffaf0; --paper:#fffefa; }
@@ -39,7 +37,6 @@ styles.textContent = `
 	@media (max-width:500px) { .stage { height:245px; } .envelope { height:190px; } .letter { min-height:165px; padding:18px; } .letter h2 { font-size:1.2rem; } .letter p { font-size:.88rem; } .open .letter { transform:translateY(-105px); } .open:hover { transform:translateY(-105px); } }
 `;
 document.head.appendChild(styles);
-
 document.body.innerHTML = `
 	<main class="page">
 		<div class="tag">A little note for you</div>
@@ -62,11 +59,9 @@ document.body.innerHTML = `
 		<button class="close" id="close" type="button">Đóng thư lại</button>
 	</main>
 `;
-
 const envelope = document.querySelector('#envelope');
 const closeButton = document.querySelector('#close');
 const openLetter = () => envelope.classList.add('open');
-
 envelope.addEventListener('click', openLetter);
 envelope.addEventListener('keydown', (event) => {
 	if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openLetter(); }
@@ -76,8 +71,6 @@ function taoDuongDan() {
   const link = document.createElement('a');
   link.href = 'https://thucuason.com';
   link.textContent = 'Chuyển hướng đến Google';
-  
-  // Chèn vào một khu vực cụ thể trên giao diện
   const khuVucHienThi = document.getElementById('https://thucuason.com');
   khuVucHienThi.appendChild(link);
 }
